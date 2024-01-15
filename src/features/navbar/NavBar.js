@@ -16,7 +16,11 @@ export default function NavBar() {
         Where in the World?
       </h1>
       <div
-        className="flex items-center gap-1 hover:cursor-pointer"
+        className={`flex items-center gap-1 p-2 rounded-full hover:cursor-pointer ${
+          darkMode
+            ? "border border-gray-700 hover:border-white hover:border"
+            : "border border-white hover:border-gray-700 hover:border"
+        }`}
         onClick={handleDarkMode}
       >
         {darkMode ? (
